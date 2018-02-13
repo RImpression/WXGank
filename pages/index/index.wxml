@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+<scroll-view scroll-y="true" bindscrolltolower="onReachBottom">
+  <view class="card-view" wx:for="{{gankArray}}" wx:key="index">
+    <view class='cell-view'>
+      <image class="cell-image"
+           src='{{item.content}}'
+        background-size="cover">
+        <text class='date-text'>{{item.publishedAt}}</text>
+      </image>
+      <view class='cell-text-view'>
+        <text class='cell-text'>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</scroll-view>
+</view>
+
+
+<!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <button class='btn-view' bindtap='btnClick'>{{btnText}}</button>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->

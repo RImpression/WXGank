@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/welfare/welfare"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4c4c4c",
+    "navigationBarTitleText": "RNGank",
+    "navigationBarTextStyle":"#FFF",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#FFF",
+    "selectedColor": "black",
+    "backgroundColor": "#4c4c4c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "精选",
+        "iconPath": "img/member_hot_normal.png",
+        "selectedIconPath": "img/member_hot_press.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "分类",
+        "iconPath": "img/member_sort_normal.png",
+        "selectedIconPath": "img/member_sort_press.png"
+      },
+      {
+        "pagePath": "pages/welfare/welfare",
+        "text": "福利",
+        "iconPath": "img/member_hot_normal.png",
+        "selectedIconPath": "img/member_hot_press.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "关于",
+        "iconPath": "img/member_about_normal.png",
+        "selectedIconPath": "img/member_about_press.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
