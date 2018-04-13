@@ -3,6 +3,7 @@
 const app = getApp()
 
 import gankApi from '../../utils/gankApiUtils.js';
+import dateUtil from '../../utils/dateUtils.js';
 
 Page({
   data: {
@@ -117,5 +118,19 @@ Page({
         duration: 2000
       })
     })
+  },
+
+  /**
+   * 卡片点击
+   */
+  onItemClick: function (event) {
+    console.log(event.currentTarget.dataset);
+    if (event.currentTarget.dataset.publishTime != null) {
+      let dateStr = dateUtil.getDateUrl(event.currentTarget.dataset.publishTime);
+      wx.navigateTo({
+        url: '/pages/daily/daily?dateStr=' + dateStr,
+      })
+    }
+    
   }
 })

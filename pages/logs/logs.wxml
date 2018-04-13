@@ -10,8 +10,16 @@
     <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
       <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
         <scroll-view style="height:100%" scroll-y>
-          <view >
-            <text>这是第{{index+1}}个页面</text>
+          <view class='item-list' wx:for="{{activeData}}" wx:key="{{index}}">
+            <view class="item-view">
+              <text class='text-desc'>{{item.desc}}</text>
+              <view class="item-info">
+                <text class='text-info'>{{item.type}}</text>
+                <text class='text-info'>author:{{item.who}}</text>
+                <text class='text-info'>{{item.publishedAt}}</text>
+              </view>
+            </view>
+            <view class='item-line'></view>
           </view>
         </scroll-view>
       </view>

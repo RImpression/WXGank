@@ -11,7 +11,10 @@ Page({
       offset: 0,
       tStart: false
     },
-    activeTab: 0
+    activeTab: 0,
+    pages:[1,1,1,1,1,1],
+    gankDatas:[[],[],[],[],[],[]],
+    activeData:[],
   },
   onLoad: function (options) {
     try {
@@ -24,6 +27,7 @@ Page({
       this.tabsCount = tabs.length;
     } catch (e) {
     }
+    this.getData();
   },
   handlerStart(e) {
     let { clientX, clientY } = e.touches[0];
@@ -85,7 +89,7 @@ Page({
     }
     stv.tStart = false;
     this.setData({ stv: this.data.stv })
-    
+
     console.log('handlerEnd');
     this.getData();
   },
@@ -107,8 +111,7 @@ Page({
   getData() {
     let index = this.data.activeTab;
     gankApi.getGankSortData(this.data.tabs[index], 1).then((res) => {
-      console.log(55555, 'key = ' + this.data.tabs[index]);
-      console.log(6666, res);
+      this.setData({ activeData : res})
     }).catch((err) => {
       console.log(err);
     })

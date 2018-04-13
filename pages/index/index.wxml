@@ -2,7 +2,7 @@
 <view class="container">
 <scroll-view scroll-y="true" bindscrolltolower="onReachBottom">
   <view class="card-view" wx:for="{{gankArray}}" wx:key="index">
-    <view class='cell-view'>
+    <view class='cell-view' data-publish-time="{{item.publishedAt}}" bindtap="onItemClick">
       <image class="cell-image"
            src='{{item.content}}'
         background-size="cover">

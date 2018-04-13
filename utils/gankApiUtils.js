@@ -38,10 +38,22 @@ export default class gankApiUtils {
    */
   static getGankSortData = (sort,pageNo) => {
     return new Promise((resolve,reject) => {
-      let URL = `https://gank.io/api/data/${sort}/${PAGE_NUM}/${pageNo}`;
+      let URL = `https://gank.io/api/data/${sort}/30/${pageNo}`;
       return HttpUtils.fetchGet(URL)
         .then((res) => {
-          resolve(res);
+          let dataArray = [];
+          res.map((data, i) => {
+            let obj = {
+              _id: data._id,
+              desc: data.desc,
+              who: data.who,
+              type: data.type,
+              url: data.url,
+              publishedAt: dateUtils.getShowDate(data.publishedAt),
+            }
+            dataArray.push(obj);
+          })
+          resolve(dataArray);
         })
         .catch((error) => {
           reject(error);
@@ -62,7 +74,7 @@ export default class gankApiUtils {
    */
   static getGankDailyData = (dateStr) => {
     return new Promise((resolve,reject) => {
-      let URL = `https://gank.io/api/day/${dateString}`;
+      let URL = `https://gank.io/api/day/${dateStr}`;
       return HttpUtils.fetchGet(URL)
         .then((res) => {
           resolve(res);

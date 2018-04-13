@@ -1,0 +1,32 @@
+/* pages/daily/daily.wxss */
+.dl-container{
+  display: flex;
+  flex-direction: column;
+  background: "#F2F2F2";
+  padding-bottom: 10px;
+}
+.dl-cell{
+  display: flex;
+  padding: 20rpx;
+  flex-direction: column;
+  padding-bottom: 20px
+}
+.dl-list{
+  display: flex;
+  flex-direction: column
+}
+.dl-title{
+  font-size: 12pt;
+  color: #333;
+  font-weight: 700;
+  padding-bottom: 10px
+}
+.dl-text-content{
+  font-size: 9pt;
+  color: #333;
+  line-height: 1
+}
+.dl-text-author{
+  font-size: 8pt;
+  color: #666
+}

@@ -27,7 +27,14 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "daily",
+					"pathName": "pages/daily/daily",
+					"query": "dateStr=2018/03/12"
+				}
+			]
 		}
 	}
 }
