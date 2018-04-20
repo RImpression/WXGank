@@ -1,23 +1,10 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/welfare/welfare",
-    "pages/daily/daily",
-    "pages/about/about",
-    "pages/image/image"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#4c4c4c",
-    "navigationBarTitleText": "RNGank",
-    "navigationBarTextStyle": "#FFF",
-    "enablePullDownRefresh": true
-  },
+  "navigationBarTitleText": "关于",
   "tabBar": {
     "color": "#FFF",
     "selectedColor": "black",
     "backgroundColor": "#4c4c4c",
+    "position": "top",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -38,16 +25,11 @@
         "selectedIconPath": "img/member_hot_press.png"
       },
       {
-        "pagePath": "pages/about/about",
+        "pagePath": "pages/index/index",
         "text": "关于",
         "iconPath": "img/member_about_normal.png",
         "selectedIconPath": "img/member_about_press.png"
       }
     ]
-  },
-  "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
-  },
-  "debug": true
+  }
 }

@@ -145,8 +145,14 @@ Page({
         duration: 2000
       })
     })
+  },
+
+  onImageClick: function(event) {
+    if (event.currentTarget.dataset.imageurl != null) {
+      wx.navigateTo({
+        url: '/pages/image/image?imageUrl=' + event.currentTarget.dataset.imageurl,
+      })
+    }
   }
-
-
 
 })
