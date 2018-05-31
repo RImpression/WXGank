@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.1",
+	"libVersion": "1.9.98",
 	"appid": "wx62009f78a7fbcb52",
 	"projectname": "RNGank",
 	"isGameTourist": false,
@@ -21,20 +21,17 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "daily",
-					"pathName": "pages/daily/daily",
-					"query": "dateStr=2018/03/12"
-				}
-			]
+			"list": []
 		}
 	}
 }

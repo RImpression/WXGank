@@ -2,7 +2,35 @@
   <view class='ab-container'>
     <image
       style='width:100%;height:500rpx'
+      mode='aspectFill'
       src='https://ws1.sinaimg.cn/large/610dc034ly1fis7dvesn6j20u00u0jt4.jpg'>
     </image>
+    <view class='ab-top'>
+      <view class='ab-title-view'>
+        <image
+          class='ab-app-img'
+          src='../../img/about_app_icon.png'></image>
+        <text class="ab-title-text">GankWX-干货集中营</text>
+        <text class='ab-title-text'>每日分享妹子图与技术干货</text>
+      </view>
+    </view>
+    <view class='ab-modal-view'>
+      <text class='ab-modal-title'>介绍与帮助</text>
+      <view class='ab-modal-content'>
+        <text class='ab-modal-text'>GankWX客户端不定期推送精选妹纸图，技术干货（设计Android,iOS,前端等技术），供用户在闲暇时打发时间。\n\nGankWX客户端实为作者业余时间练手项目，代码完全开源，使用微信小程序开发，注释清晰，代码通俗易懂，适合新手阅读学习。GankWX数据内容来源于代码家的http://gank.io,感谢大牛们的无私奉献。\n\n由于个人版小程序不支持WebView跳转，暂只提供链接复制，对内容感兴趣者可在外部浏览器打开。\n\n项目开源地址：https://github.com/RImpression/WXGank</text>
+      </view>
+    </view>
+    <view class='ab-modal-view'>
+      <text class='ab-modal-title'>开发人员</text>
+      <view class='ab-modal-content'>
+        <view class='author-left'>
+          <image class='author-img' src='../../img/github-avatar.jpg'></image>
+        </view>
+        <view class='author-right'>
+          <text class='author-text'>Rim<text style='margin-left:80rpx'>态度决定高度</text></text>
+          <text class='author-text'>React Native && Android原生 && 小程序</text>
+        </view>
+      </view>
+    </view>
   </view>
 </scroll-view>

@@ -10,9 +10,10 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4c4c4c",
-    "navigationBarTitleText": "RNGank",
+    "navigationBarTitleText": "GankWX",
     "navigationBarTextStyle": "#FFF",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#4c4c4c"
   },
   "tabBar": {
     "color": "#FFF",
@@ -34,8 +35,8 @@
       {
         "pagePath": "pages/welfare/welfare",
         "text": "福利",
-        "iconPath": "img/member_hot_normal.png",
-        "selectedIconPath": "img/member_hot_press.png"
+        "iconPath": "img/member_welfare_normal.png",
+        "selectedIconPath": "img/member_welfare_press.png"
       },
       {
         "pagePath": "pages/about/about",
@@ -49,5 +50,5 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": false
 }

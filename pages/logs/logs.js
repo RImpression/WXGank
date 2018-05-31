@@ -1,10 +1,9 @@
-//logs.js
 const util = require('../../utils/util.js');
 import gankApi from '../../utils/gankApiUtils.js';
 
 Page({
   data: {
-    tabs: ['Android', 'iOS', '前端', '瞎推荐', '拓展资源', '休息视频'],
+    tabs: ['Android', 'iOS', '前端', '瞎推荐', '拓展资源'],
     stv: {
       windowWidth: 0,
       lineWidth: 0,
@@ -12,8 +11,8 @@ Page({
       tStart: false
     },
     activeTab: 0,
-    pages:[1,1,1,1,1,1],
-    gankDatas:[[],[],[],[],[],[]],
+    pages:[1,1,1,1,1],
+    gankDatas:[[],[],[],[],[]],
     activeData:[],
   },
   onLoad: function (options) {
@@ -90,7 +89,6 @@ Page({
     stv.tStart = false;
     this.setData({ stv: this.data.stv })
 
-    console.log('handlerEnd');
     this.getData();
   },
   _updateSelectedPage(page) {
@@ -100,7 +98,6 @@ Page({
     stv.offset = stv.windowWidth * activeTab;
     this.setData({ stv: this.data.stv });
 
-    console.log('handlerUpdate');
     this.getData();
   },
   handlerTabTap(e) {
@@ -114,6 +111,21 @@ Page({
       this.setData({ activeData : res})
     }).catch((err) => {
       console.log(err);
+    })
+  },
+
+  itemClick: function(event) {
+    let item = event.currentTarget.dataset.item;
+    let url = item.url;
+    wx.setClipboardData({
+      data: url,
+      success: function(res){
+        wx.showModal({
+          title: '提示',
+          content: '链接已复制到粘贴板，请用外部浏览器打开',
+          showCancel: false,
+        })
+      }
     })
   }
 })

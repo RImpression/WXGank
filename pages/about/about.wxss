@@ -3,3 +3,69 @@
   flex-direction: column;
   background: #DDD
 }
+.ab-top{
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+  top: 0;
+}
+.ab-title-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500rpx;
+}
+.ab-app-img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid #fff
+}
+.ab-title-text {
+  display: flex;
+  font-size: 12pt;
+  color: #4c4c4c;
+  margin-top: 5px;
+}
+.ab-modal-view{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx
+}
+.ab-modal-title{
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 10rpx
+}
+.ab-modal-content{
+  display: flex;
+  padding: 30rpx 20rpx 30rpx 20rpx;
+  background: #fff
+}
+.ab-modal-text{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 45rpx
+} 
+.author-left{
+  width: 20%;
+  display: flex
+}
+.author-right{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.author-img{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  display: flex
+}
+.author-text{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 45rpx
+}

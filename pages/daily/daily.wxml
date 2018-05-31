@@ -4,7 +4,8 @@
   <image
     style='width:100%;height:400rpx'
     src='{{imgUrl}}'
-    mode='aspectFill'></image>
+    mode='aspectFill'
+    bindtap='imgClick'></image>
   <view class='dl-list' wx:for='{{data}}' wx:key='index'>
     <view class='dl-cell'>
       <text class='dl-title'>{{item.type}}</text>

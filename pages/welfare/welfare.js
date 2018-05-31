@@ -85,7 +85,7 @@ Page({
 
   loadImages: function() {
     gankApi.getGankSortData('福利',1).then((res)=>{
-      console.log(1111,res);
+      // console.log(1111,res);
       this.setData({
         loadingCount:res.length,
         images: res,
