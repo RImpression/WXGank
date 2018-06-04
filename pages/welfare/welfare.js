@@ -124,20 +124,21 @@ Page({
 
   //加载更多onReachBottom
   onReachBottom: function () {
+    var that = this;
     //显示加载更多loading
     this.setData({
       isHideLoadMore: false
     })
-    gankApi.getGankSortData('福利', this.data.page+1).then((res) => {
-      let newArray = this.data.images.concat(res);
+    gankApi.getGankSortData('福利', that.data.page+1).then((res) => {
+      let newArray = that.data.images.concat(res);
       this.setData({
         images: newArray,
-        page: this.data.page + 1,
+        page: that.data.page + 1,
         isHideLoadMore: true,
-        loadingCount: this.data.loadingCount + res.length
+        loadingCount: that.data.loadingCount + res.length
       })
     }).catch((err) => {
-      this.setData({
+      that.setData({
         isHideLoadMore: true
       })
       wx.showToast({

@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.98",
 	"appid": "wx62009f78a7fbcb52",
-	"projectname": "RNGank",
+	"projectname": "GankWX",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

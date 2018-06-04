@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-<scroll-view scroll-y="true" bindscrolltolower="onReachBottom">
+<view scroll-y="true">
   <view class="card-view" wx:for="{{gankArray}}" wx:key="index">
     <view class='cell-view' data-publish-time="{{item.publishedAt}}" bindtap="onItemClick">
       <image class="cell-image"
@@ -17,7 +17,7 @@
     <view class="weui-loading"></view>
     <view class="weui-loadmore__tips">正在加载</view>
   </view>
-</scroll-view>
+</view>
 </view>
 
 

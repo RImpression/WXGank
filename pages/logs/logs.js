@@ -3,7 +3,7 @@ import gankApi from '../../utils/gankApiUtils.js';
 
 Page({
   data: {
-    tabs: ['Android', 'iOS', '前端', '瞎推荐', '拓展资源'],
+    tabs: ['Android', 'iOS', '前端', '瞎推荐', '拓展资源','休息娱乐'],
     stv: {
       windowWidth: 0,
       lineWidth: 0,
@@ -11,8 +11,8 @@ Page({
       tStart: false
     },
     activeTab: 0,
-    pages:[1,1,1,1,1],
-    gankDatas:[[],[],[],[],[]],
+    pages:[1,1,1,1,1,1],
+    gankDatas:[[],[],[],[],[],[]],
     activeData:[],
   },
   onLoad: function (options) {
@@ -107,8 +107,11 @@ Page({
   //请求数据
   getData() {
     let index = this.data.activeTab;
-    gankApi.getGankSortData(this.data.tabs[index], 1).then((res) => {
-      this.setData({ activeData : res})
+    let sort = this.data.tabs[index] == '休息娱乐' ? '休息视频' : this.data.tabs[index];
+    gankApi.getGankSortData(sort, 1).then((res) => {
+      let newArr = this.data.gankDatas;
+      newArr[index] = res;
+      this.setData({ gankDatas : newArr})
     }).catch((err) => {
       console.log(err);
     })
