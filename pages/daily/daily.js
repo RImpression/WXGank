@@ -68,9 +68,12 @@ Page({
   },
 
   imgClick() {
-    wx.navigateTo({
-      url: '/pages/image/image?imageUrl=' + this.data.imgUrl,
+    wx.previewImage({
+      urls: [this.data.imgUrl],
     })
+    // wx.navigateTo({
+    //   url: '/pages/image/image?imageUrl=' + this.data.imgUrl,
+    // })
   },
 
 

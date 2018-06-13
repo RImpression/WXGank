@@ -4,12 +4,12 @@
 <view scroll-y="true" style="height:{{scrollH}}px">
   <view style="width:100%">
     <view class="img_item">
-      <view wx:for="{{col1}}" wx:key="id">
+      <view wx:for="{{col1}}" wx:key="index">
         <image data-imageUrl="{{item.url}}" bindtap='onImageClick' src="{{item.url}}" style="width:100%;height:{{item.height}}px" lazy-load="true"></image>
       </view>
     </view>
     <view class="img_item">
-      <view wx:for="{{col2}}" wx:key="id">
+      <view wx:for="{{col2}}" wx:key="index">
         <image data-imageUrl='{{item.url}}' bindtap='onImageClick' src="{{item.url}}" style="width:100%;height:{{item.height}}px" lazy-load="true"></image>
       </view>
     </view>

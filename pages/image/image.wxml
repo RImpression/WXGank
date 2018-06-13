@@ -1,5 +1,5 @@
 <view class='image-view'>
-  <image
+   <image
     bindtap='onImageClick'
     style='width:100%;height:100vh'
     src="{{imageUrl}}"
@@ -7,5 +7,5 @@
   <image
     class='btn-download'
     src='../../img/icon_download.png'
-    bindtap='imageDownload'></image>
+    bindtap='imageDownload'></image> 
 </view>
